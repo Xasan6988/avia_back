@@ -6,14 +6,18 @@ from avia.models import Airport
 
 
 class AirportListElemetSerializer(ModelSerializer):
+    region = StringRelatedField()
+    country = StringRelatedField()
     type = StringRelatedField()
 
     class Meta:
         model = Airport
         fields = (
-            'id',
+            "id",
             "name",
             "ident",
             "local_code",
+            "region",
             "type",
+            "country"
         )

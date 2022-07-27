@@ -6,10 +6,10 @@ from avia.models import Airport
 
 
 class AirportSerializer(ModelSerializer):
-    # region = StringRelatedField()
-    # continent = StringRelatedField()
-    # country = StringRelatedField()
-    # municipality = StringRelatedField()
+    region = StringRelatedField()
+    continent = StringRelatedField()
+    country = StringRelatedField()
+    municipality = StringRelatedField()
     type = StringRelatedField()
 
     class Meta:
@@ -18,13 +18,13 @@ class AirportSerializer(ModelSerializer):
             "ident",
             "local_code",
             "name",
-            # "coordinates",
-            # "elevation_ft",
-            # "gps_code",
-            # "iata_code",
-            # "continent",
+            "coordinates",
+            "elevation_ft",
+            "gps_code",
+            "iata_code",
+            "continent",
             "type",
-            # "country",
-            # "region",
-            # "municipality",
+            "country",
+            "region",
+            "municipality",
         )
