@@ -5,7 +5,7 @@ from rest_framework.serializers import ModelSerializer
 from avia.models import Airport
 
 
-class AirportListElemetSerializer(ModelSerializer):
+class AirportListElementSerializer(ModelSerializer):
     region = StringRelatedField()
     country = StringRelatedField()
     type = StringRelatedField()

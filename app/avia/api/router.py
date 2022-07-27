@@ -1,10 +1,8 @@
 from django.urls import path
 from rest_framework import routers
 
-from avia.views import AirportsViewSet
-
-# from avia.views import AirportTypesViewSet, CommentsViewSet, ContinentsViewSet, CountriesViewSet, \
-# MunicipalitiesViewSet, RegionsViewSet
+from avia.views import AirportsViewSet, AirportTypesViewSet, CommentsViewSet, ContinentsViewSet, CountriesViewSet, \
+MunicipalitiesViewSet, RegionsViewSet
 
 router = routers.DefaultRouter()
 
@@ -19,33 +17,33 @@ urlpatterns.extend([
         'get': 'retrieve'
     })),
 
-    # path('airports/<int:airport_id>/comments', CommentsViewSet.as_view({
-    #     'get': 'list',
-    #     'post': 'create',
-    # })),
+    path('airports/<int:airport_id>/comments', CommentsViewSet.as_view({
+        'get': 'list',
+        'post': 'create',
+    })),
 
-    # path('airports/comments/<int:pk>', CommentsViewSet.as_view({
-    #     'put': 'update',
-    #     'delete': 'remove'
-    # })),
+    path('airports/comments/<int:pk>', CommentsViewSet.as_view({
+        'put': 'update',
+        'delete': 'remove'
+    })),
 
-    # path('handbooks/airport-types', AirportTypesViewSet.as_view({
-    #     'get': 'list'
-    # })),
+    path('handbooks/airport-types', AirportTypesViewSet.as_view({
+        'get': 'list'
+    })),
 
-    # path('handbooks/regions', RegionsViewSet.as_view({
-    #     'get': 'list'
-    # })),
+    path('handbooks/regions', RegionsViewSet.as_view({
+        'get': 'list'
+    })),
 
-    # path('handbooks/countries', CountriesViewSet.as_view({
-    #     'get': 'list'
-    # })),
+    path('handbooks/countries', CountriesViewSet.as_view({
+        'get': 'list'
+    })),
 
-    # path('handbooks/continents', ContinentsViewSet.as_view({
-    #     'get': 'list'
-    # })),
+    path('handbooks/continents', ContinentsViewSet.as_view({
+        'get': 'list'
+    })),
 
-    # path('handbooks/municipalities', MunicipalitiesViewSet.as_view({
-    #     'get': 'list'
-    # })),
+    path('handbooks/municipalities', MunicipalitiesViewSet.as_view({
+        'get': 'list'
+    })),
 ])
