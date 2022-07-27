@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'drf_spectacular',
     'drf_spectacular_sidecar',
+    'authorization.apps.AuthorizationConfig',
+    'avia.apps.AviaConfig',
 ]
 
 MIDDLEWARE = [
