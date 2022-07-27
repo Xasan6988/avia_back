@@ -2,7 +2,7 @@ from django.urls import path
 from rest_framework import routers
 
 from avia.views import AirportsViewSet, AirportTypesViewSet, CommentsViewSet, ContinentsViewSet, CountriesViewSet, \
-MunicipalitiesViewSet, RegionsViewSet
+    MunicipalitiesViewSet, RegionsViewSet
 
 router = routers.DefaultRouter()
 

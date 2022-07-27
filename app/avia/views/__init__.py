@@ -1,4 +1,4 @@
-from .airport import AirportsViewSet
+from .airports import AirportsViewSet
 from .comments import CommentsViewSet
 
 from .handbooks.airport_types import AirportTypesViewSet
