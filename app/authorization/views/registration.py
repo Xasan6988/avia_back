@@ -19,12 +19,12 @@ class RegistrationView(APIView):
       description='Регистрация пользователей в системе',
       tags=['Authorization'],
       request=inline_serializer(
-      name='AuthSerializer',
-      fields={
-        'username': serializers.CharField(),
-        'email': serializers.EmailField(),
-        'password': serializers.CharField()
-      },
+            name='AuthSerializer',
+            fields={
+                'username': serializers.CharField(),
+                'email': serializers.EmailField(),
+                'password': serializers.CharField()
+            },
       ),
       responses={
         201: auth_response,
