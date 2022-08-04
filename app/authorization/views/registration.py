@@ -10,7 +10,7 @@ from authorization.serializers import UserSerializer
 from avia.api.schemas import response_400
 
 
-class RegistrationVIew(APIView):
+class RegistrationView(APIView):
     authentication_classes = []
 
     @extend_schema(
