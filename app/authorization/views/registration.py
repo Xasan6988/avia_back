@@ -10,26 +10,27 @@ from authorization.api.schemas import auth_response
 from authorization.serializers import UserSerializer
 from avia.api.schemas import response_400
 
-@extend_schema(
-  summary='Регистрация пользователя',
-  description='Регистрация пользователей в системе',
-  tags=['Authorization'],
-  request=inline_serializer(
-    name='AuthSerializer',
-    fields={
-      'username': serializers.CharField(),
-      'email': serializers.EmailField(),
-      'password': serializers.CharField()
-    },
-  ),
-  responses={
-    201: auth_response,
-    400: response_400,
-  }
-)
+
 class RegistrationView(APIView):
     authentication_classses = []
-
+    
+    @extend_schema(
+      summary='Регистрация пользователя',
+      description='Регистрация пользователей в системе',
+      tags=['Authorization'],
+      request=inline_serializer(
+      name='AuthSerializer',
+      fields={
+        'username': serializers.CharField(),
+        'email': serializers.EmailField(),
+        'password': serializers.CharField()
+      },
+      ),
+      responses={
+        201: auth_response,
+        400: response_400,
+      }
+    )
     def post(self, request):
       serializer = UserSerializer(data=request.data)
       serializer.is_valid(raise_exeption=True)
